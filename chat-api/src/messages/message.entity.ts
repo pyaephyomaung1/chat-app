@@ -1,7 +1,14 @@
 import { nanoid } from 'nanoid';
 import { User } from 'src/users/user.entity';
-import { BeforeInsert, Column, ManyToOne, PrimaryColumn } from 'typeorm';
+import {
+  BeforeInsert,
+  Column,
+  Entity,
+  ManyToOne,
+  PrimaryColumn,
+} from 'typeorm';
 
+@Entity()
 export class Message {
   @PrimaryColumn()
   id: string;
